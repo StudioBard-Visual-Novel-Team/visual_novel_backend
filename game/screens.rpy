@@ -204,107 +204,9 @@ style input:
 screen choice(items):
     style_prefix "choice"
 
-    ## 선택지가 표시되는 동안에만 왼쪽 위에 호감도 UI를 보여준다.
-    use affection_hud
-
     vbox:
         for i in items:
             textbutton i.caption action i.action
-
-
-## 호감도 HUD ###################################################################
-##
-## 선택지(choice) 화면이 떠 있는 동안에만 왼쪽 위에 표시된다.
-## current_heroine 값(직전에 말한 히로인)에 따라 이름/얼굴/호감도가 바뀐다.
-
-## ===== 호감도 UI 크기 / 위치 설정 (1명 표시 / 3명 표시 각각 조절) =====
-## 1명 표시(평소 선택지)일 때
-define AFF_SIZE_SINGLE = {
-    "w": 350,     # UI 박스 가로
-    "h": 150,     # UI 박스 세로
-    "text": 30,   # 글자 크기 (호감도 수치 / 이름)
-    "face": 90,   # 얼굴 이미지 크기
-    "x": 1700,    # UI 위치 (가로, 화면 왼쪽에서부터)
-    "y": 180,     # UI 위치 (세로, 화면 위에서부터)
-}
-## 3명 표시(히로인 선택 메뉴)일 때
-define AFF_SIZE_MULTI = {
-    "w": 350,     # UI 박스 가로
-    "h": 100,     # UI 박스 세로
-    "text": 30,   # 글자 크기 (호감도 수치 / 이름)
-    "face": 90,   # 얼굴 이미지 크기
-    "x": 190,     # UI 위치 (가로, 화면 왼쪽에서부터)
-    "y": 270,     # UI 위치 (세로, 화면 위에서부터)
-    "gap": 12,    # 카드 3개 사이 세로 간격
-}
-
-## 호감도 카드 1개 (히로인 1명분) — 하트 / 호감도 수치+이름 / 얼굴
-##   cfg : 위의 AFF_SIZE_SINGLE / AFF_SIZE_MULTI 중 하나 (크기 설정)
-screen affection_card(key, cfg):
-    $ _hd = heroine_data[key]
-    $ _name = _hd["name"]
-    $ _head = _hd["head"]
-    $ _aff = getattr(store, _hd["var"])
-    $ _affstr = "%+d" % _aff   # +1, +3, -1 처럼 부호와 함께 표시
-
-    frame:
-        style "affection_frame"
-        xsize cfg["w"]     # 가로 크기 (AFF_SIZE_* 에서 조절)
-        ysize cfg["h"]     # 세로 크기 (AFF_SIZE_* 에서 조절)
-
-        hbox:
-            spacing 12
-            yalign 0.5
-
-            # # 하트 아이콘
-            # text "♥":
-            #     color "#ff5a7a"
-            #     size cfg["heart"]
-            #     yalign 0.5
-
-            # 호감도 수치 + 이름
-            vbox:
-                yalign 0.5
-                spacing 4
-
-                text "호감도 : [_affstr]":
-                    color "#3a3a3a"
-                    size cfg["text"]
-                    xoffset 30
-                text "[_name]":
-                    color "#3a3a3a"
-                    size cfg["text"]
-                    xoffset 30
-
-            # 오른쪽 얼굴 이미지 (캐릭터이름_head_1.png) — 배경 없음
-            # xoffset 값을 키우면 얼굴이 더 오른쪽으로 이동 (음수면 왼쪽)
-            add Transform(_head, fit="contain", xysize=(cfg["face"], cfg["face"])):
-                yalign 0.5
-                xoffset 70
-
-
-screen affection_hud():
-    zorder 90
-
-    if show_all_affection:
-        # 히로인 선택 메뉴: 3명 모두 세로로 표시 (크기/위치는 AFF_SIZE_MULTI)
-        vbox:
-            xpos AFF_SIZE_MULTI["x"] ypos AFF_SIZE_MULTI["y"]   # 위치 (AFF_SIZE_MULTI 에서 조절)
-            spacing AFF_SIZE_MULTI["gap"]                        # 카드 사이 간격
-            use affection_card("harin", AFF_SIZE_MULTI)
-            use affection_card("yeonhee", AFF_SIZE_MULTI)
-            use affection_card("yuna", AFF_SIZE_MULTI)
-    elif current_heroine and current_heroine in heroine_data:
-        # 평소: 직전에 말한 히로인 1명만 표시 (크기/위치는 AFF_SIZE_SINGLE)
-        vbox:
-            xpos AFF_SIZE_SINGLE["x"] ypos AFF_SIZE_SINGLE["y"]  # 위치 (AFF_SIZE_SINGLE 에서 조절)
-            use affection_card(current_heroine, AFF_SIZE_SINGLE)
-
-
-## 배경색 / 안쪽 여백 (1명·3명 공통). 크기는 위 AFF_SIZE_* 에서 조절.
-style affection_frame is frame:
-    background Solid("#ffffff")
-    padding (14, 12)
 
 
 style choice_vbox is vbox
@@ -346,7 +248,7 @@ screen quick_menu():
             textbutton _("자동진행") action Preference("auto-forward", "toggle")
             textbutton _("저장하기") action ShowMenu('save')
             textbutton _("Q.저장하기") action QuickSave()
-            textbutton _("Q.불러오기") action QuickLoad()
+            # textbutton _("Q.불러오기") action QuickLoad()
             textbutton _("설정") action ShowMenu('preferences')
 
 
@@ -370,6 +272,7 @@ style quick_button:
 
 style quick_button_text:
     properties gui.text_properties("quick_button")
+    size 24
 
 
 ################################################################################
@@ -383,54 +286,52 @@ style quick_button_text:
 
 screen navigation():
 
-    vbox:
-        style_prefix "navigation"
-
-        if main_menu:
-            ## 메인 메뉴에서는 타이틀("물 주는 법") 아래쪽 왼쪽에 버튼을 배치합니다.
-            ## ypos 숫자를 키우면 아래로, 줄이면 위로 이동합니다.
-            xpos 300
-            ypos 600
-        else:
-            xpos gui.navigation_xpos
-            yalign 0.5
-
-        spacing gui.navigation_spacing
-
-        if main_menu:
+    if main_menu:
+        ## 메인 메뉴: 화면 아래쪽에 가로로 배치, 검은 굵은 글씨.
+        hbox:
+            style_prefix "main_nav"
+            xalign 0.5
+            yalign 0.95
+            spacing 60
 
             textbutton _("시작하기") action Start()
+            textbutton _("불러오기") action ShowMenu("load")
+            textbutton _("환경설정") action ShowMenu("preferences")
+            textbutton _("버전정보") action ShowMenu("about")
 
-        else:
+            if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
+                textbutton _("조작방법") action ShowMenu("help")
+
+            if renpy.variant("pc"):
+                textbutton _("종료하기") action Quit(confirm=not main_menu)
+
+    else:
+        vbox:
+            style_prefix "navigation"
+            xpos gui.navigation_xpos
+            yalign 0.5
+            spacing gui.navigation_spacing
 
             textbutton _("대사록") action ShowMenu("history")
-
             textbutton _("저장하기") action ShowMenu("save")
+            textbutton _("불러오기") action ShowMenu("load")
+            textbutton _("환경설정") action ShowMenu("preferences")
 
-        textbutton _("불러오기") action ShowMenu("load")
+            if _in_replay:
+                textbutton _("리플레이 끝내기") action EndReplay(confirm=True)
+            else:
+                textbutton _("메인 메뉴") action MainMenu()
 
-        textbutton _("환경설정") action ShowMenu("preferences")
+            textbutton _("버전정보") action ShowMenu("about")
 
-        if _in_replay:
+            if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
+                ## 도움말 메뉴는 모바일 디바이스와 맞지 않아 불필요합니다.
+                textbutton _("조작방법") action ShowMenu("help")
 
-            textbutton _("리플레이 끝내기") action EndReplay(confirm=True)
-
-        elif not main_menu:
-
-            textbutton _("메인 메뉴") action MainMenu()
-
-        textbutton _("버전정보") action ShowMenu("about")
-
-        if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
-
-            ## 도움말 메뉴는 모바일 디바이스와 맞지 않아 불필요합니다.
-            textbutton _("조작방법") action ShowMenu("help")
-
-        if renpy.variant("pc"):
-
-            ## iOS에서는 종료 버튼이 금지되어 있으며 Android 및 웹에서는 불필요
-            ## 합니다.
-            textbutton _("종료하기") action Quit(confirm=not main_menu)
+            if renpy.variant("pc"):
+                ## iOS에서는 종료 버튼이 금지되어 있으며 Android 및 웹에서는 불필요
+                ## 합니다.
+                textbutton _("종료하기") action Quit(confirm=not main_menu)
 
 
 style navigation_button is gui_button
@@ -442,6 +343,23 @@ style navigation_button:
 
 style navigation_button_text:
     properties gui.text_properties("navigation_button")
+
+
+## 메인 메뉴 전용 버튼 스타일 (가로 배치 · 검은 굵은 글씨)
+style main_nav_button is default
+style main_nav_button_text is default
+
+style main_nav_button:
+    padding (10, 6)
+
+style main_nav_button_text:
+    font gui.text_font
+    size 32
+    bold True
+    color "#000000"
+    hover_color "#444444"
+    insensitive_color "#888888"
+    outlines [(2, "#ffffff", 0, 0)]
 
 
 ## Main Menu 스크린 ###############################################################
