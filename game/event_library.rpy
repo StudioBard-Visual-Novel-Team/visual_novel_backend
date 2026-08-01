@@ -56,7 +56,7 @@ label library_harin:
 
     hide harin
     with dissolve
-    scene bg coastal_road
+    scene bg coastal_road_night
     with fade
     stop music fadeout 1.5
     play sound "audio/ocean_waves_1.mp3" fadein 2.0 loop
@@ -147,7 +147,7 @@ label library_yeonhee:
 
     hide yeonhee
     with dissolve
-    scene bg coastal_road
+    scene bg coastal_road_night
     with fade
     stop music fadeout 1.5
     play sound "audio/ocean_waves_1.mp3" fadein 2.0 loop
@@ -266,7 +266,7 @@ label library_yuna:
 
     hide yuna
     with dissolve
-    scene bg coastal_road
+    scene bg coastal_road_night
     with fade
     stop music fadeout 1.5
     play sound "audio/ocean_waves_1.mp3" fadein 2.0 loop

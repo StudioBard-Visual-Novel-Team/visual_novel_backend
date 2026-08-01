@@ -24,23 +24,11 @@ label epilogue:
     narrator "같은 과제를 했지만 누구와 함께했는지에 따라 남은 기억은 전혀 달랐다."
     narrator "그날 이후 마음 한쪽에 남아 있던 말이 있었다."
 
-    # 엔딩 분기 – 각 히로인의 총 선택 횟수를 계산
-    python:
-        def _count_partner(key):
-            return sum(1 for v in (
-                umbrella_partner, barn_partner, coastal_partner,
-                storage_partner, maid_partner, library_partner,
-                greenhouse_partner,
-            ) if v == key)
-        harin_count = _count_partner("harin")
-        yeonhee_count = _count_partner("yeonhee")
-        yuna_count = _count_partner("yuna")
-
-    if greenhouse_partner == "harin" and harin_affection >= 8 and harin_count >= 4:
+    if ending_promise_partner == "harin":
         jump ending_harin_happy
-    elif greenhouse_partner == "yeonhee" and yeonhee_affection >= 8 and yeonhee_count >= 4:
+    elif ending_promise_partner == "yeonhee":
         jump ending_yeonhee_happy
-    elif greenhouse_partner == "yuna" and yuna_affection >= 8 and yuna_count >= 4:
+    elif ending_promise_partner == "yuna":
         jump ending_yuna_happy
     else:
         jump ending_common_sad

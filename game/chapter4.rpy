@@ -55,12 +55,6 @@ label greenhouse_harin:
 
     h "그러면 같이 해요. 한 줄씩 같이 확인하는 게 좋을 것 같아요."
 
-    python:
-        _harin_count = sum(1 for v in (
-            umbrella_partner, barn_partner, coastal_partner,
-            storage_partner, maid_partner, library_partner,
-        ) if v == "harin") + 1  # +1 for this chapter 4 selection
-
     narrator "우리가 맡은 곳은 온실 안쪽의 방울토마토 구역이었다."
 
     p "줄기와 잎부터 보고, 발견한 사람이 바로 기록할까?"
@@ -156,21 +150,6 @@ label greenhouse_harin:
 
     h "다음에는 문제가 생기면 기다리지 않고 먼저 말해볼게요."
 
-    # 조건 충족 시 약속 대사 (호감도 8 이상 + 하린 선택 횟수 4회 이상)
-    if harin_affection >= 8 and _harin_count >= 4:
-        narrator "평가표를 제출한 뒤 하린은 제출함 앞에서 잠시 머뭇거렸다."
-
-        h "선배. 방학식 날…… 끝나고 바로 가지 말아주세요."
-        p "무슨 일 있어?"
-
-        narrator "하린은 긴장한 표정으로도 시선을 피하지 않았다."
-
-        h "그날 말씀드리고 싶은 게 있어요. 이번에는 제가 먼저 말할게요."
-        p "어디로 가면 돼?"
-        h "온실이요. 오늘 같이 봤던 방울토마토 구역 앞에서 기다릴게요."
-        p "알았어. 방학식 끝나고 갈게."
-        h "네. 기다릴게요."
-
     hide harin
     with dissolve
     jump greenhouse_end
@@ -186,12 +165,6 @@ label greenhouse_yeonhee:
     y "남주야, 아직 파트너 없지? 그럼 우리 같이 하자."
     p "평가인데 벌써 자신 있어?"
     y "준비는 했으니까. 같은 반끼리 호흡 한 번 보여주는 거야."
-
-    python:
-        _yeonhee_count = sum(1 for v in (
-            umbrella_partner, barn_partner, coastal_partner,
-            storage_partner, maid_partner, library_partner,
-        ) if v == "yeonhee") + 1
 
     narrator "우리는 온실 중앙의 방울토마토 구역으로 이동했다."
 
@@ -268,21 +241,6 @@ label greenhouse_yeonhee:
 
     y "응. 칭찬받아서 기분 좋은 것과, 칭찬이 없으면 아무것도 아닌 건 다른 것 같아."
 
-    # 조건 충족 시 약속 대사 (호감도 8 이상 + 연희 선택 횟수 4회 이상)
-    if yeonhee_affection >= 8 and _yeonhee_count >= 4:
-        narrator "평가표를 제출하고 나오자, 연희는 장갑을 벗은 채 한동안 손끝만 내려다봤다."
-
-        p "연희야?"
-        y "남주야. 방학식 끝나고 바로 가지 마."
-        p "왜?"
-        y "교실에서 조금만 기다려."
-
-        narrator "연희는 가볍게 웃으려다 말고, 다시 진지한 표정이 되었다."
-
-        y "지금 말하면 또 장난처럼 넘길 것 같아서. 그날은 제대로 말할게."
-        p "알았어. 기다릴게."
-        y "응."
-
     hide yeonhee
     with dissolve
     jump greenhouse_end
@@ -302,12 +260,6 @@ label greenhouse_yuna:
     narrator "선배는 잠시 나를 바라보다가 평가표 한 장을 건넸다."
 
     sen "공통 과제니까 한 줄씩 같이 확인하자."
-
-    python:
-        _yuna_count = sum(1 for v in (
-            umbrella_partner, barn_partner, coastal_partner,
-            storage_partner, maid_partner, library_partner,
-        ) if v == "yuna") + 1
 
     narrator "우리가 맡은 곳은 자동 관수 장치가 설치된 방울토마토 구역이었다."
 
@@ -389,27 +341,6 @@ label greenhouse_yuna:
 
     narrator "선배는 대답을 흐리지 않았다."
 
-    # 조건 충족 시 약속 대사 (호감도 8 이상 + 유나 선택 횟수 4회 이상)
-    if yuna_affection >= 8 and _yuna_count >= 4:
-        narrator "평가가 끝난 뒤 선배는 마지막으로 기록표를 한 번 더 확인했다."
-        narrator "예전 같았으면 두 번, 세 번 확인했을지도 모른다."
-        narrator "하지만 이번에는 기록표를 덮고 그대로 제출함에 넣었다."
-
-        p "다시 확인 안 하셔도 돼요?"
-        sen "네가 확인했잖아."
-
-        narrator "짧은 대답이었지만, 그 말의 무게는 가볍지 않았다."
-
-        sen "남주야. 방학식 날, 끝나고 학생회실로 와."
-        p "학생회 일이 남았어요?"
-        sen "없어."
-        p "그럼 무슨 일인데요?"
-        sen "아무 일도 없어. 그래도 와줬으면 해."
-        p "알겠습니다. 방학식 끝나고 갈게요."
-        sen "먼저 가면 연락할 거야."
-        p "그럼 먼저 가지 않고 기다릴게요."
-        sen "응."
-
     hide yuna
     with dissolve
     jump greenhouse_end
@@ -421,4 +352,4 @@ label greenhouse_end:
     with fade
     pause 1.0
 
-    jump epilogue
+    jump event_coastal_intro

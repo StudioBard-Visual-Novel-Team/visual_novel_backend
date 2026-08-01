@@ -294,4 +294,4 @@ label maid_end:
     with fade
     pause 1.0
 
-    jump chapter3
+    jump event_fireworks

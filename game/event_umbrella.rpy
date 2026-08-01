@@ -467,4 +467,4 @@ label umbrella_end:
     with fade
     pause 1.0
 
-    jump event_coastal_intro
+    jump chapter2
