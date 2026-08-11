@@ -24,6 +24,10 @@ label event_fireworks:
 
 # ---------- 서하린 루트 ----------
 label fireworks_harin:
+    scene cg fireworks_harin
+    with dissolve
+    pause
+
     narrator "하린은 사람이 적은 운동장 뒤쪽에서 기다리고 있었다."
 
     h "사람이 많아서 뒤쪽에 있었어요. 선배가 못 찾을까 봐 조금 걱정했는데…… 와주셨네요."
@@ -53,6 +57,10 @@ label fireworks_harin:
 
 # ---------- 강연희 루트 ----------
 label fireworks_yeonhee:
+    scene cg fireworks_yeonhee
+    with dissolve
+    pause
+
     play music "audio/Kang_yeonhee_bgm_1.mp3" fadein 2.0
 
     narrator "연희는 운동장 중앙에서 밝은 얼굴로 하늘을 바라보고 있었다. 내가 다가가자 말없이 옆자리를 비워줬다."
@@ -78,6 +86,10 @@ label fireworks_yeonhee:
 
 # ---------- 차유나 루트 ----------
 label fireworks_yuna:
+    scene cg fireworks_yuna
+    with dissolve
+    pause
+
     narrator "선배는 사람들보다 조금 떨어진 운동장 가장자리에 서 있었다."
 
     p "선배, 옆에 있어도 돼요?"

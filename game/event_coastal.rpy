@@ -61,8 +61,9 @@ label event_coastal_intro:
 
 
 label coastal_harin:
-    show harin neutral at center
+    scene cg ocean_harin
     with dissolve
+    pause
 
     narrator "나는 신발을 벗고 하린이 서 있는 물가로 다가갔다."
     narrator "하린은 발목까지 밀려온 파도를 내려다보다가 내 쪽으로 조금 자리를 내줬다."
@@ -158,8 +159,9 @@ label coastal_harin:
 
 
 label coastal_yeonhee:
-    show yeonhee neutral at center
+    scene cg ocean_yeonhee
     with dissolve
+    pause
 
     narrator "나는 연희가 사람들 사이로 들어가기 전에 이름을 불렀다."
 
@@ -276,8 +278,9 @@ label coastal_yeonhee:
 
 
 label coastal_yuna:
-    show yuna neutral at center
+    scene cg ocean_yuna
     with dissolve
+    pause
 
     narrator "선배는 진행 보조에게 일을 넘기고도 수건 위의 파일을 바라보고 있었다."
 

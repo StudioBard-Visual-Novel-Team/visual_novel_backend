@@ -46,8 +46,9 @@ label event_maid_cafe:
 
 # ---------- 서하린 루트 ----------
 label maid_harin:
-    show harin neutral at center
+    scene cg maid_harin
     with dissolve
+    pause
 
     narrator "하린은 앞치마 끝을 손으로 잡은 채 내 테이블로 다가왔다."
 
@@ -132,8 +133,9 @@ label maid_harin:
 
 # ---------- 강연희 루트 ----------
 label maid_yeonhee:
-    show yeonhee neutral at center
+    scene cg maid_yeonhee
     with dissolve
+    pause
 
     narrator "연희가 쟁반을 들고 밝게 다가왔다."
 
@@ -203,8 +205,9 @@ label maid_yeonhee:
 
 # ---------- 차유나 루트 ----------
 label maid_yuna:
-    show yuna neutral at center
+    scene cg maid_yuna
     with dissolve
+    pause
 
     narrator "선배는 검은 쟁반을 들고 내 테이블 앞에 섰다."
 

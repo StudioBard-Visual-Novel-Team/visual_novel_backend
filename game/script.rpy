@@ -34,7 +34,7 @@ define narrator = Character(None, what_italic=True)
 # 캐릭터 스탠딩 (원본 크기가 제각각이라 화면 세로 ~1000px 기준으로 개별 zoom)
 image harin neutral = Transform("images/Seo_harin_1.png", zoom=0.33)
 image yeonhee neutral = Transform("images/Kang_yeonhee_1.png", zoom=0.22)
-image yuna neutral = Transform("images/Cha_yuna_1.png", zoom=0.7)
+image yuna neutral = Transform("images/Cha_yuna_1.png", zoom=0.3)
 image namjoo neutral = Transform("images/Kim_nam_joo_1.png", zoom=0.33)
 
 # 배경
@@ -62,6 +62,17 @@ image bg school_playground_sunset__rain_1 = "images/school_playground_sunset__ra
 image bg maid_cafe = "images/maid cafe classroom_1.jpg"
 image bg school_fireworks = "images/school_fireworks_1.png"
 image bg coastal_road_night = "images/coast_road_night_1.png"
+
+# 인물별 이벤트 CG
+image cg maid_harin = "images/event_maid_cafe classroom_Seo_harin_1.jpg"
+image cg maid_yeonhee = "images/event_maid_cafe classroom_Kang_yeonhee_1.jpg"
+image cg maid_yuna = "images/event_maid_cafe classroom_Cha_yuna_1.jpg"
+image cg ocean_harin = "images/event_ocean_Seo_harin_1.jpg"
+image cg ocean_yeonhee = "images/event_ocean_Kang_yeonhee_1.jpg"
+image cg ocean_yuna = "images/event_ocean_Cha_yuna_1.jpg"
+image cg fireworks_harin = "images/event_school_fireworks_Seo_harin_1.jpg"
+image cg fireworks_yeonhee = "images/event_school_fireworks_Kang_yeonhee_1.jpg"
+image cg fireworks_yuna = "images/event_school_fireworks_Cha_yuna_1.jpg"
 
 # ===== 상태 변수 =====
 # 엔딩 분기 판정용 (UI 표시는 하지 않음)
