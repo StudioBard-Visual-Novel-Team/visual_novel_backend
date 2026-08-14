@@ -15,6 +15,7 @@ style default:
 
 style input:
     properties gui.text_properties("input", accent=True)
+    color "#000000"
     adjust_spacing False
 
 style hyperlink_text:
@@ -286,7 +287,7 @@ style quick_button_text:
 
 screen navigation():
 
-    if main_menu:
+    if main_menu and renpy.get_screen("main_menu"):
         ## 메인 메뉴: 화면 아래쪽에 가로로 배치, 검은 굵은 글씨.
         hbox:
             style_prefix "main_nav"
@@ -434,7 +435,7 @@ screen game_menu(title, scroll=None, yinitial=0.0, spacing=0):
     style_prefix "game_menu"
 
     if main_menu:
-        add gui.main_menu_background
+        add Solid("#ffffff")
     else:
         add gui.game_menu_background
 

@@ -5,8 +5,8 @@ label event_coastal_intro:
     scene bg school_beach
     with fade
     stop music fadeout 1.5
-    play sound "audio/ocean_waves_1.mp3" fadein 2.0 loop
-    play music "audio/ocean_waves_1.mp3" fadein 2.0
+    # play sound "audio/ocean_waves_1.mp3" fadein 2.0 loop
+    # play music "audio/ocean_waves_1.mp3" fadein 2.0
 
     "같은 날 오후, 학교 앞 해변."
 

@@ -6,6 +6,9 @@ label prologue:
     with fade
     play music "audio/title_music_1.mp3" fadein 2.0
 
+    $ player_name = renpy.input("{color=#000000}주인공의 이름을 입력하세요.\n(입력하고 엔터를 누르세요, 입력 안하고 엔터를 누르면 \"남주\"로 설정됩니다){/color} ", default="", length=10)
+    $ player_name = player_name.strip() or "남주"
+
     "{i}[[농작물이 부족해진 세상, 농사 전문 학교들이 하나 둘 생겨났고, 농업 인재의 가치가 올라갔다.]{/i}"
     "{i}[[그중에서도 국제농업전문고등학교는 실습 시설과 취업률이 뛰어나 가장 인기 있는 농업 전문 학교 중 하나가 되었다.]{/i}"
 
@@ -125,6 +128,11 @@ label prologue:
 
     p "(갑자기 왜 물어보는 거지? 알려줘서 나쁠 건 없으니… 상관없겠지?)"
     p "음, 네. 상관없어요. 이름은 김남주이고 2학년이에요."
+    
+    show harin neutral at center
+    with dissolve
+    
+    
     h "저는 1학년 서하린이라고 해요. 감사합니다. 나중에는 제가 양보해 드릴게요."
 
     p "(뭔가 많이 소심해 보인다. 그래도 아는 사람이 생겨서 다행인 거겠지?)"

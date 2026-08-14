@@ -17,17 +17,18 @@
 #   epilogue.rpy       – 에필로그 방학식 + 해피/새드 엔딩 분기
 
 # ===== 캐릭터 정의 =====
-define p = Character('남주', color="#e6d8a3")
-define h = Character('하린', color="#f7b8c9")
-define y = Character('연희', color="#ffd977")
-define u = Character('유나', color="#a3c8ff")
-define t = Character('담임', color="#cccccc")
-define teach = Character('교사', color="#cccccc")
-define stu = Character('학생', color="#cccccc")
-define aide = Character('학생회 진행 보조', color="#cccccc")
-define lib = Character('사서', color="#cccccc")
-define sen = Character('선배', color="#a3c8ff")
-define unknown = Character('???', color="#bbbbbb")
+default player_name = "남주"
+define p = Character('[player_name]', color="#000000")
+define h = Character('하린', color="#000000")
+define y = Character('연희', color="#000000")
+define u = Character('유나', color="#000000")
+define t = Character('담임', color="#000000")
+define teach = Character('교사', color="#000000")
+define stu = Character('학생', color="#000000")
+define aide = Character('학생회 진행 보조', color="#000000")
+define lib = Character('사서', color="#000000")
+define sen = Character('선배', color="#000000")
+define unknown = Character('???', color="#000000")
 define narrator = Character(None, what_italic=True)
 
 # ===== 이미지 정의 =====
@@ -105,7 +106,7 @@ label start:
     scene black
     with fade
 
-    centered "{size=+8}너에게 물주는 법{/size}\n\n{size=-4}국제농업전문고등학교 전학생 김남주의 이야기{/size}"
+    centered "{color=#ffffff}{size=+8}너에게 물주는 법{/size}\n\n{size=-4}국제농업전문고등학교 전학생의 이야기{/size}{/color}"
     with dissolve
 
     pause 1.0
