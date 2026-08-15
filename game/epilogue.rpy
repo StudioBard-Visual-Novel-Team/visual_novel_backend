@@ -4,7 +4,7 @@
 label epilogue:
     scene black
     with fade
-    centered "{size=+6}에필로그{/size}\n\n방학식"
+    centered "{color=#ffffff}{size=+6}에필로그{/size}\n\n방학식{/color}"
     with dissolve
     pause 1.5
 
@@ -89,7 +89,7 @@ label ending_harin_happy:
     with fade
     pause 1.0
 
-    centered "{size=+4}― 서하린 해피 엔딩 ―{/size}\n\n「기다릴 수 있는 약속」"
+    centered "{color=#ffffff}{size=+4}― 서하린 해피 엔딩 ―{/size}\n\n「기다릴 수 있는 약속」{/color}"
     with dissolve
     pause 4.0
 
@@ -160,7 +160,7 @@ label ending_yeonhee_happy:
     with fade
     pause 1.0
 
-    centered "{size=+4}― 강연희 해피 엔딩 ―{/size}\n\n「웃지 않아도 닿은 마음」"
+    centered "{color=#ffffff}{size=+4}― 강연희 해피 엔딩 ―{/size}\n\n「웃지 않아도 닿은 마음」{/color}"
     with dissolve
     pause 4.0
 
@@ -231,7 +231,7 @@ label ending_yuna_happy:
     with fade
     pause 1.0
 
-    centered "{size=+4}― 차유나 해피 엔딩 ―{/size}\n\n「일이 없어도 이어지는 약속」"
+    centered "{color=#ffffff}{size=+4}― 차유나 해피 엔딩 ―{/size}\n\n「일이 없어도 이어지는 약속」{/color}"
     with dissolve
     pause 4.0
 
@@ -275,7 +275,7 @@ label ending_common_sad:
     with fade
     pause 1.0
 
-    centered "{size=+4}― 공통 새드 엔딩 ―{/size}\n\n「기다리라는 말이 없던 날」"
+    centered "{color=#ffffff}{size=+4}― 공통 새드 엔딩 ―{/size}\n\n「기다리라는 말이 없던 날」{/color}"
     with dissolve
     pause 4.0
 
@@ -287,7 +287,7 @@ label ending_credits:
     scene black
     with fade
 
-    centered "{size=+8}너에게 물주는 법{/size}\n\n{size=-2}― END ―{/size}"
+    centered "{color=#ffffff}{size=+8}너에게 물주는 법{/size}\n\n{size=-2}― END ―{/size}{/color}"
     with dissolve
     pause 4.0
 

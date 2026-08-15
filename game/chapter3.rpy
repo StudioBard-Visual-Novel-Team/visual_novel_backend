@@ -5,7 +5,7 @@
 label chapter3:
     scene black
     with fade
-    centered "{size=+6}챕터 3{/size}\n\n시험 기간"
+    centered "{color=#ffffff}{size=+6}챕터 3{/size}\n\n시험 기간{/color}"
     with dissolve
     pause 1.5
 

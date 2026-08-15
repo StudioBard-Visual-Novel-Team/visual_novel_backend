@@ -173,6 +173,8 @@ screen input(prompt):
     style_prefix "input"
 
     window:
+        yalign 0.5
+        yminimum 350
 
         vbox:
             xanchor gui.dialogue_text_xalign

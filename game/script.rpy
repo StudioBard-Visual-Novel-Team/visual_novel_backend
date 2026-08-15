@@ -17,6 +17,7 @@
 #   epilogue.rpy       – 에필로그 방학식 + 해피/새드 엔딩 분기
 
 # ===== 캐릭터 정의 =====
+default player_surname = "김"
 default player_name = "남주"
 define p = Character('[player_name]', color="#000000")
 define h = Character('하린', color="#000000")

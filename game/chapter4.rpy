@@ -4,7 +4,7 @@
 label chapter4:
     scene black
     with fade
-    centered "{size=+6}챕터 4{/size}\n\n학기말 공동 실습 평가"
+    centered "{color=#ffffff}{size=+6}챕터 4{/size}\n\n학기말 공동 실습 평가{/color}"
     with dissolve
     pause 1.5
 
@@ -162,7 +162,7 @@ label greenhouse_yeonhee:
 
     narrator "연희는 이미 장갑을 낀 채 평가표 두 장을 들고 있었다."
 
-    y "남주야, 아직 파트너 없지? 그럼 우리 같이 하자."
+    y "[player_name]야, 아직 파트너 없지? 그럼 우리 같이 하자."
     p "평가인데 벌써 자신 있어?"
     y "준비는 했으니까. 같은 반끼리 호흡 한 번 보여주는 거야."
 

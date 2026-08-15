@@ -8,7 +8,7 @@ label event_storage:
     narrator "농업축제를 며칠 앞둔 방과 후였다."
     narrator "교실 뒤편에는 부스별 준비물 목록이 붙어 있었다."
 
-    teach "김남주, 아직 안 갔지?"
+    teach "[player_surname][player_name], 아직 안 갔지?"
     p "네. 무슨 일이세요?"
 
     narrator "교사는 목록에서 창고라고 적힌 부분을 손가락으로 짚었다."
@@ -179,7 +179,7 @@ label storage_yeonhee:
     show yeonhee neutral at center
     with dissolve
 
-    y "남주야, 마침 잘 왔다."
+    y "[player_name]야, 마침 잘 왔다."
 
     narrator "창고 안으로 들어가자 연희가 접이식 발판 옆에 서 있었다."
 
@@ -201,7 +201,7 @@ label storage_yeonhee:
     narrator "나는 연희의 허리와 팔을 붙잡았고, 연희는 내 쪽으로 넘어졌다."
     narrator "나는 그대로 바닥에 주저앉았다."
 
-    y "남주야, 괜찮아?"
+    y "[player_name]야, 괜찮아?"
     p "응. 너는?"
 
     narrator "연희는 몸을 일으키려다 발목을 멈췄다."

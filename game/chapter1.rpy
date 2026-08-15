@@ -6,7 +6,7 @@ label chapter1_common:
     stop music fadeout 1.5
     scene black
     with fade
-    centered "{size=+6}챕터 1{/size}\n\n새로운 시작"
+    centered "{color=#ffffff}{size=+6}챕터 1{/size}\n\n새로운 시작{/color}"
     with dissolve
     pause 1.5
 

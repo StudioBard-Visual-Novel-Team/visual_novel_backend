@@ -5,7 +5,7 @@
 label chapter2:
     scene black
     with fade
-    centered "{size=+6}챕터 2{/size}\n\n학교 축제"
+    centered "{color=#ffffff}{size=+6}챕터 2{/size}\n\n학교 축제{/color}"
     with dissolve
     pause 1.5
 
