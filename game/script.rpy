@@ -66,6 +66,9 @@ image bg school_fireworks = "images/school_fireworks_1.png"
 image bg coastal_road_night = "images/coast_road_night_1.png"
 
 # 인물별 이벤트 CG
+image cg rain harin = "images/event_umbrella_Seo_harin_1.jpg"
+image cg rain yeonhee = "images/event_umbrella_Kang_yeonhee_1.jpg"
+image cg rain yuna = "images/event_umbrella_Cha_yuna_1.jpg"
 image cg maid_harin = "images/event_maid_cafe classroom_Seo_harin_1.jpg"
 image cg maid_yeonhee = "images/event_maid_cafe classroom_Kang_yeonhee_1.jpg"
 image cg maid_yuna = "images/event_maid_cafe classroom_Cha_yuna_1.jpg"

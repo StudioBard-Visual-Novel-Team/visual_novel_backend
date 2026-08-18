@@ -290,23 +290,20 @@ style quick_button_text:
 screen navigation():
 
     if main_menu and renpy.get_screen("main_menu"):
-        ## 메인 메뉴: 화면 아래쪽에 가로로 배치, 검은 굵은 글씨.
-        hbox:
+        ## 메인 메뉴: 타이틀 로고 아래 2x2 그리드 배치, 로고와 가운데 정렬.
+        vbox:
             style_prefix "main_nav"
-            xalign 0.5
-            yalign 0.95
-            spacing 60
+            xpos 320
+            xanchor 0.5
+            yalign 0.9
+            spacing 12
 
-            textbutton _("시작하기") action Start()
-            textbutton _("불러오기") action ShowMenu("load")
-            textbutton _("환경설정") action ShowMenu("preferences")
-            textbutton _("버전정보") action ShowMenu("about")
-
-            if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
-                textbutton _("조작방법") action ShowMenu("help")
+            textbutton _("시작하기") action Start() xalign 0.5
+            textbutton _("불러오기") action ShowMenu("load") xalign 0.5
+            textbutton _("환경설정") action ShowMenu("preferences") xalign 0.5
 
             if renpy.variant("pc"):
-                textbutton _("종료하기") action Quit(confirm=not main_menu)
+                textbutton _("종료하기") action Quit(confirm=not main_menu) xalign 0.5
 
     else:
         vbox:

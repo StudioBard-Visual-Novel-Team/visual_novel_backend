@@ -67,8 +67,9 @@ label event_umbrella:
 
 # ---------- 서하린 루트 ----------
 label umbrella_harin:
-    show harin neutral at center
+    scene cg rain harin
     with dissolve
+    pause
 
     narrator "처마 기둥 옆에 하린이 서 있었다."
     narrator "하린은 바깥으로 손을 내밀어 빗줄기의 세기를 확인하더니, 금방 손을 거두었다."
@@ -220,8 +221,9 @@ label umbrella_yeonhee:
     narrator "나는 우산을 쓰고 교문을 지나가려 했다."
     narrator "그때 현관 쪽에서 누군가가 뛰어나왔다."
 
-    show yeonhee neutral at center
+    scene cg rain yeonhee
     with dissolve
+    pause
 
     y "아, 진짜 갑자기 오네!"
 

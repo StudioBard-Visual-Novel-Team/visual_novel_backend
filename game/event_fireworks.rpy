@@ -2,13 +2,12 @@
 # 이벤트 씬 6(메이드 카페)에서 선택한 히로인이 그대로 이어짐
 
 label event_fireworks:
-    scene bg school_fireworks
+    scene black
     with fade
-    play music "audio/festival_music_2.mp3" fadein 2.0
 
-    narrator "축제 후반, 운동장 방송에서 곧 불꽃놀이를 시작한다는 안내가 흘러나왔다."
-    narrator "운동장 주변 조명이 하나씩 꺼졌다. 발사 직전의 짧은 정적이 내려앉자 학생들의 목소리도 자연스럽게 낮아졌다."
-    narrator "어둠 속에서 불꽃이 올라가는 빛이 보였고, 조금 늦게 발사음이 운동장을 울렸다."
+    centered "{color=#fff}축제 후반, 운동장 방송에서 곧 불꽃놀이를 시작한다는 안내가 흘러나왔다.{/color}"
+    centered "{color=#fff}운동장 주변 조명이 하나씩 꺼졌다. 발사 직전의 짧은 정적이 내려앉자 학생들의 목소리도 자연스럽게 낮아졌다.{/color}"
+    centered "{color=#fff}어둠 속에서 불꽃이 올라가는 빛이 보였고, 조금 늦게 발사음이 운동장을 울렸다.{/color}"
 
     $ fireworks_partner = maid_partner
 
@@ -27,7 +26,7 @@ label fireworks_harin:
     scene cg fireworks_harin
     with dissolve
     pause
-
+    
     narrator "하린은 사람이 적은 운동장 뒤쪽에서 기다리고 있었다."
 
     h "사람이 많아서 뒤쪽에 있었어요. 선배가 못 찾을까 봐 조금 걱정했는데…… 와주셨네요."
@@ -60,8 +59,6 @@ label fireworks_yeonhee:
     scene cg fireworks_yeonhee
     with dissolve
     pause
-
-    play music "audio/Kang_yeonhee_bgm_1.mp3" fadein 2.0
 
     narrator "연희는 운동장 중앙에서 밝은 얼굴로 하늘을 바라보고 있었다. 내가 다가가자 말없이 옆자리를 비워줬다."
     narrator "첫 불꽃이 터지는 순간 연희의 눈이 크게 빛났다."
