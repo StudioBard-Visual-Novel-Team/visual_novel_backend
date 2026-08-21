@@ -11,8 +11,6 @@ label chapter3:
 
     scene bg classroom
     with fade
-    play music "audio/title_music_2.mp3" fadein 2.0
-
     "6월 기말고사 준비"
 
     narrator "농업축제가 끝난 다음 주, 복도와 교실에 남아 있던 장식들이 하나씩 치워졌다."

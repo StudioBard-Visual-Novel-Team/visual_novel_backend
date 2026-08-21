@@ -5,7 +5,7 @@ label event_maid_cafe:
     stop music fadeout 1.5
     scene bg festival
     with fade
-    play music "audio/festival_music_3.mp3" fadein 2.0
+    play music "audio/festival_music_1.mp3" fadein 2.0
 
     narrator "농업축제 당일, 학교 안에는 평소보다 많은 사람이 오가고 있었다."
     narrator "운동장에서는 원예 모종 판매가 진행됐고, 실습동 앞에서는 식품가공 시식과 스마트팜 체험이 열리고 있었다."

@@ -71,7 +71,6 @@ label prologue:
 
     "[[부스럭거리는 소리]"
 
-    play music "audio/Kang_yeonhee_bgm_1.mp3" fadein 2.0
     show yeonhee neutral at center
     with dissolve
 

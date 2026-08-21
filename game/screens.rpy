@@ -295,7 +295,7 @@ screen navigation():
             style_prefix "main_nav"
             xpos 320
             xanchor 0.5
-            yalign 0.9
+            yalign 0.85
             spacing 12
 
             textbutton _("시작하기") action Start() xalign 0.5
@@ -354,7 +354,7 @@ style main_nav_button:
 
 style main_nav_button_text:
     font gui.text_font
-    size 32
+    size 45
     bold True
     color "#000000"
     hover_color "#444444"
@@ -373,7 +373,8 @@ screen main_menu():
     ## 이렇게 하면 다른 메뉴 화면이 모두 교체됩니다.
     tag menu
 
-    add gui.main_menu_background
+    add "gui/main_menu_bg.png"
+    add "gui/main_menu_title.png" xpos 1 ypos 100
 
     ## 이 빈 프레임은 기본 메뉴를 어둡게 만듭니다.
     frame:
