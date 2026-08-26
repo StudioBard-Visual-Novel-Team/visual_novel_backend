@@ -207,8 +207,16 @@ style input:
 screen choice(items):
     style_prefix "choice"
 
+    default captions = [i for i in items if i.action is None]
+    default choices = renpy.random.sample(
+        [i for i in items if i.action is not None],
+        len([i for i in items if i.action is not None])
+    )
+
     vbox:
-        for i in items:
+        for i in captions:
+            text i.caption
+        for i in choices:
             textbutton i.caption action i.action
 
 
@@ -374,7 +382,7 @@ screen main_menu():
     tag menu
 
     add "gui/main_menu_bg.png"
-    add "gui/main_menu_title.png" xpos 1 ypos 100
+    add "gui/main_menu_title.png" zoom 0.45 xpos 320 xanchor 0.5 ypos 400 yanchor 0.5
 
     ## 이 빈 프레임은 기본 메뉴를 어둡게 만듭니다.
     frame:

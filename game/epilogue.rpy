@@ -42,8 +42,9 @@ label ending_harin_happy:
     narrator "방학식이 끝난 뒤 나는 하린이 말한 온실로 향했다."
     narrator "문을 열자 하린은 공동 실습 평가 때 함께 바로 세운 방울토마토 화분 앞에서 기다리고 있었다."
 
-    show harin neutral at center
+    scene cg happy_ending_harin
     with dissolve
+    pause
 
     p "기다렸어?"
     h "조금요. 그래도 오늘은 제가 기다리겠다고 말한 거니까요."
@@ -104,9 +105,10 @@ label ending_yeonhee_happy:
     narrator "방학식이 끝난 뒤에도 나는 자리에 남았다."
     narrator "교실에 있던 학생들이 하나둘 빠져나가고, 마지막으로 뒷문이 닫혔다."
 
-    show yeonhee neutral at center
+    scene cg happy_ending_yeonhee
     with dissolve
-
+    pause
+    
     narrator "연희는 앞쪽 책상에 기대 서 있다가 나를 바라봤다."
 
     y "진짜 기다렸네."
@@ -177,9 +179,10 @@ label ending_yuna_happy:
 
     sen "들어와."
 
-    show yuna neutral at center
+    scene cg happy_ending_yuna
     with dissolve
-
+    pause
+    
     narrator "학생회실 책상 위에는 서류가 거의 없었다. 평소라면 회의록이나 축제 자료가 펼쳐져 있었을 자리였다."
 
     p "오늘은 정말 할 일이 없네요."

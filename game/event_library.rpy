@@ -59,8 +59,8 @@ label library_harin:
     scene bg coastal_road_night
     with fade
     stop music fadeout 1.5
-    play sound "audio/ocean_waves_1.mp3" fadein 2.0 loop
-    play music "audio/ocean_waves_1.mp3" fadein 2.0
+    play sound "audio/ocean_waves_1.mp3" fadein 2.0 loop volume 0.3
+    play music "audio/ocean_waves_1.mp3" fadein 2.0 volume 0.3
     show harin neutral at center
     with dissolve
 
@@ -150,8 +150,8 @@ label library_yeonhee:
     scene bg coastal_road_night
     with fade
     stop music fadeout 1.5
-    play sound "audio/ocean_waves_1.mp3" fadein 2.0 loop
-    play music "audio/ocean_waves_1.mp3" fadein 2.0
+    play sound "audio/ocean_waves_1.mp3" fadein 2.0 loop volume 0.3
+    play music "audio/ocean_waves_1.mp3" fadein 2.0 volume 0.3
     show yeonhee neutral at center
     with dissolve
 
@@ -269,8 +269,8 @@ label library_yuna:
     scene bg coastal_road_night
     with fade
     stop music fadeout 1.5
-    play sound "audio/ocean_waves_1.mp3" fadein 2.0 loop
-    play music "audio/ocean_waves_1.mp3" fadein 2.0
+    play sound "audio/ocean_waves_1.mp3" fadein 2.0 loop volume 0.3
+    play music "audio/ocean_waves_1.mp3" fadein 2.0 volume 0.3
     show yuna neutral at center
     with dissolve
 

@@ -36,10 +36,11 @@ label event_coastal_intro:
     with dissolve
 
     sen "인원 확인이 끝나면 알려줘. 안전선 쪽도 한 번씩 확인하고."
-    aide "네. 선배도 이제 쉬세요."
-
+    
     hide yuna
     with dissolve
+
+    aide "네. 선배도 이제 쉬세요."
 
     narrator "선배는 닫힌 파일을 내려다보다가 수건 위에 내려놓았다."
     narrator "파도가 모래사장 가까이 밀려왔다가 천천히 빠져나갔다."

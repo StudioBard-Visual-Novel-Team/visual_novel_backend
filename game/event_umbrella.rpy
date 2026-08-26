@@ -342,8 +342,9 @@ label umbrella_yuna:
     narrator "나는 우산을 펴고 교문을 나섰다."
     narrator "교문 밖 인도 쪽에서 선배가 걸음을 멈추고 있었다."
 
-    show yuna neutral at center
+    scene cg rain yuna
     with dissolve
+    pause
 
     # [CG – 차유나 / 비 맞은 히로인]
     narrator "긴 머리 끝이 비에 젖어 어깨 쪽에 붙어 있었고, 손에는 접힌 서류 봉투가 들려 있었다."
