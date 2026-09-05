@@ -34,7 +34,7 @@ label prologue:
 
     sen "안녕, 네가 전학생이구나."
     sen "내 이름은 차유나야."
-    p "안녕하세요. [player_surname][player_name]라고 합니다."
+    p "안녕하세요. [player_surname][player_name][josa(player_name, '이라고')] 합니다."
     u "인사는 끝났으니까 간단하게 학교시설들 위치를 알려 줄게."
     u "학교 규정은 첫 조회 때 설명할 테니 듣고, 5월 전학이니 실습 진도는 담임한테 따로 물어봐."
 
@@ -56,7 +56,7 @@ label prologue:
 
     t "자, 모두 주목. 오늘 새친구가 전학을 왔어."
     t "자기소개 해줄래?"
-    p "안녕, 내 이름은 [player_surname][player_name]라고 해. 좀 늦게 왔지만 잘 부탁해."
+    p "안녕, 내 이름은 [player_surname][player_name][josa(player_name, '이라고')] 해. 좀 늦게 왔지만 잘 부탁해."
     t "자, 자기소개도 끝났으니 자리는 저기 뒤에 남은 자리에 가서 앉아."
     t "조회 시작할게."
 
@@ -127,7 +127,7 @@ label prologue:
     unknown "고마워요. 혹시… 나이랑 이름 좀 알려주실 수 있나요?"
 
     p "(갑자기 왜 물어보는 거지? 알려줘서 나쁠 건 없으니… 상관없겠지?)"
-    p "음, 네. 상관없어요. 이름은 [player_surname][player_name]이고 2학년이에요."
+    p "음, 네. 상관없어요. 이름은 [player_surname][player_name][josa(player_name, '이고')] 2학년이에요."
     
     show harin neutral at center
     with dissolve
@@ -147,7 +147,7 @@ label prologue:
 
     "[[오늘의 하루가 끝나가는지 저녁바람이 불어오고 있다.]"
     "[[방학까지는 앞으로 두 달도 채 남지 않았다.]"
-    "[[짧은 시간이지만 큰 변화가 생긴다고 [player_name]는 생각치도 못하고 잠에 들었다.]"
+    "[[짧은 시간이지만 큰 변화가 생긴다고 [player_name][josa(player_name, '은는')] 생각치도 못하고 잠에 들었다.]"
     
     stop music fadeout 1.5
 

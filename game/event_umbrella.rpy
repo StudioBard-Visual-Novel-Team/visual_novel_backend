@@ -24,7 +24,7 @@ label event_umbrella:
     narrator "교실 여기저기에서 웃음이 터졌다."
     narrator "종례가 끝나자 학생들이 가방을 챙기기 시작했다."
 
-    stu "[player_name]야, 너 우산 있어?"
+    stu "[player_name][josa(player_name, '아야')], 너 우산 있어?"
     p "가방에 하나 넣어둔 것 같은데. 잠깐만."
 
     narrator "나는 가방 안쪽 주머니를 뒤졌다."
@@ -236,7 +236,7 @@ label umbrella_yeonhee:
 
     narrator "연희가 나를 발견하고 눈을 크게 떴다."
 
-    y "[player_name]야. 너 우산 있었어?"
+    y "[player_name][josa(player_name, '아야')]. 너 우산 있었어?"
     p "응. 같이 쓸래?"
 
     narrator "연희는 젖은 앞머리를 손으로 넘기며 내 우산 쪽으로 다가왔다."

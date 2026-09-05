@@ -109,7 +109,7 @@ label event_barn:
 
     narrator "나는 닭을 피하려고 한 발 뒤로 물러났다."
 
-    stu "[player_name]야, 뒤 조심해!"
+    stu "[player_name][josa(player_name, '아야')], 뒤 조심해!"
 
     narrator "뒤꿈치 아래에서 사료 알갱이가 밀렸다."
     narrator "몸이 한쪽으로 크게 기울었다."
@@ -160,7 +160,7 @@ label barn_harin:
 
     narrator "교사가 우리 쪽으로 다가왔다."
 
-    teach "서하린, 보건실에 가서 발목부터 확인해. [player_surname][player_name]가 같이 가."
+    teach "서하린, 보건실에 가서 발목부터 확인해. [player_surname][player_name][josa(player_name, '이가')] 같이 가."
     p "네."
     h "선생님, 저는 혼자 가도……."
     teach "발 제대로 못 딛고 있잖아. 부축받고 가."
@@ -276,7 +276,7 @@ label barn_yeonhee:
 
     narrator "연희가 점검표를 내려놓고 내 팔을 잡아당겼다."
 
-    y "[player_name]야, 이쪽!"
+    y "[player_name][josa(player_name, '아야')], 이쪽!"
 
     narrator "나는 연희 쪽으로 끌려가며 가까스로 중심을 잡았다."
     narrator "하지만 연희의 신발이 사료 위에서 미끄러졌다."
@@ -455,7 +455,7 @@ label barn_yuna:
 
     narrator "교사는 나를 바라봤다."
 
-    teach "[player_surname][player_name]가 같이 가. 부축해드려."
+    teach "[player_surname][player_name][josa(player_name, '이가')] 같이 가. 부축해드려."
     p "네."
 
     narrator "나는 선배의 팔을 내 어깨에 올렸다."

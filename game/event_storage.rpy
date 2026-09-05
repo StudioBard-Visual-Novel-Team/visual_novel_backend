@@ -179,7 +179,7 @@ label storage_yeonhee:
     show yeonhee neutral at center
     with dissolve
 
-    y "[player_name]야, 마침 잘 왔다."
+    y "[player_name][josa(player_name, '아야')], 마침 잘 왔다."
 
     narrator "창고 안으로 들어가자 연희가 접이식 발판 옆에 서 있었다."
 
@@ -201,7 +201,7 @@ label storage_yeonhee:
     narrator "나는 연희의 허리와 팔을 붙잡았고, 연희는 내 쪽으로 넘어졌다."
     narrator "나는 그대로 바닥에 주저앉았다."
 
-    y "[player_name]야, 괜찮아?"
+    y "[player_name][josa(player_name, '아야')], 괜찮아?"
     p "응. 너는?"
 
     narrator "연희는 몸을 일으키려다 발목을 멈췄다."

@@ -16,6 +16,49 @@
 #   event_coastal.rpy  – 이벤트 씬 3 (학교 앞 해변)
 #   epilogue.rpy       – 에필로그 방학식 + 해피/새드 엔딩 분기
 
+# ===== 한국어 조사 자동 처리 =====
+# 이름/아이템 등 임의의 단어 뒤에 받침 유무에 맞는 조사를 반환한다.
+# 사용 예: "[player_name][josa(player_name, '이가')] 왔다."
+init python:
+    def josa(word, josa_type):
+        if not word:
+            return ""
+
+        last_char = word[-1]
+
+        if u'가' <= last_char <= u'힣':
+            code = ord(last_char) - 0xAC00
+            jongseong = code % 28
+            has_batchim = jongseong != 0
+            is_rieul = jongseong == 8
+        else:
+            has_batchim = False
+            is_rieul = False
+
+        table = {
+            '은는':   ('은', '는'),
+            '이가':   ('이', '가'),
+            '을를':   ('을', '를'),
+            '아야':   ('아', '야'),
+            '과와':   ('과', '와'),
+            '이라고': ('이라고', '라고'),
+            '이나':   ('이나', '나'),
+            '이여':   ('이여', '여'),
+            '이고':   ('이고', '고'),
+            '이야':   ('이야', '야'),
+            '이란':   ('이란', '란'),
+            '이랑':   ('이랑', '랑'),
+        }
+
+        if josa_type == '으로':
+            return '로' if (not has_batchim or is_rieul) else '으로'
+
+        if josa_type not in table:
+            return josa_type
+
+        with_b, without_b = table[josa_type]
+        return with_b if has_batchim else without_b
+
 # ===== 캐릭터 정의 =====
 default player_surname = "김"
 default player_name = "남주"
